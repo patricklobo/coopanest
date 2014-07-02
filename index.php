@@ -7,10 +7,7 @@
         Condigo de teste
         <?php
         echo "lobo";
-        
-        echo "Felipe";
-        
-        echo "Teste de numero 3";
+    
         
         ?>
     </body>
