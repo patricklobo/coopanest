@@ -1,0 +1,285 @@
+
+body{
+    background: #e2e2e2; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 50%, #fefefe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(50%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 50%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 50%,#fefefe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 50%,#fefefe 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 50%,#fefefe 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.menu{
+    float: right;
+    position: relative;
+    margin: auto;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    margin: 0 20px 0 20px;
+    text-shadow: 1px 1px black;
+}
+
+.usuario{
+    float: right;
+    color: black;
+    text-shadow: 1px 1px white;
+    margin: 0 20px 0 20px;
+}
+
+.barra-titulo{
+    float: left;
+    text-shadow: 1px 1px black;
+    margin: 0 0 0 30px;
+   
+}
+
+.barra {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: red;
+    box-shadow: 2px 2px 2px black;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px #ff5555;
+}
+.barra img{
+    margin: 2px;
+    position: relative;
+    float: right;
+}
+
+.geral{
+    margin: 20px auto;
+    width: 1000px;
+}
+table {
+    margin: 20px auto;
+    font-size: 20px;
+    color: #ff5555;
+    text-shadow: 1px 1px white;
+}
+
+table tr {
+    height: 50px;
+}
+
+input[type="text"], input[type="password"] {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid red;
+    box-shadow: 1px 1px white;
+}
+textArea{
+    width: 270px;
+    height: 300px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid red;
+    box-shadow: 1px 1px white;
+}
+
+.table_eventos {
+    width: 600px;
+}
+.table_eventos .titulo {
+    background: black;
+    color: white;
+    text-shadow: none;
+}
+.table_eventos tr {
+    height: 20px;
+}
+.table_eventos tr td {
+    border: 1px solid black;
+}
+
+
+.novoEvento textArea{
+    width: 270px;
+    height: 300px;
+}
+
+.novoEvento input[type="text"], .novoEvento input[type="password"] {
+    width: 270px;
+}
+
+input[type="submit"] {
+    float: right;
+    width: 100%;
+    height: 40px;
+    background: white;
+    color: red;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 1px 1px white;
+}
+
+#msg {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    border-radius: 10px;
+    background: #fdfdc1;
+    border: 2px solid white;
+    color: red;
+    box-shadow: 2px 2px 2px black;
+    float: bottom;
+    bottom: 10px;
+}
+
+#calendario {
+    width: 1000px;
+    float: left;
+    text-align: center;
+    background: url('img/textura.jpg');
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px black;
+
+}
+#calendario tr td a {
+    text-align: left;
+    text-decoration: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#calendario tr td a span {
+    font-size: 12px;
+    color: black;
+}
+
+#calendario tr td {
+    /*border-left: 1px solid black;*/
+    /*border-top: 2px solid black;*/
+}
+
+
+#calendario tr td:hover {
+    color: black;
+
+    background: white;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+}
+
+#calendario .tdsemana, #calendario .tdtitulo {
+    color: #b44e08;
+    border-left: none;
+    border-top: none;
+}
+
+#calendario .tdtitulo {
+    color: #984711;
+    font-size: 40px;
+    line-height: 30px;
+}
+
+
+
+#calendarioBotao{
+    width: 1000px;
+    margin: 20px auto;
+    font-size: 20px;
+    color: #ff5555;
+    text-shadow: 1px 1px white;
+
+}
+
+#calendarioBotao a {
+    text-decoration: none;
+    text-shadow: none;
+    background: white;
+    width: 150px;
+    text-align: center;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+
+}
+#calendarioBotao a:hover {
+    color: white;
+    background: red;
+    text-shadow: 1px 1px 1px black;
+
+
+}
+
+
+#calendarioBotao .proximo {
+    float: right;
+}
+
+#toposemana{
+    font-size: 30px;
+    height: 50px;
+
+    border-left: none;
+    border-top: none;
+}
+
+.calendario_linha {
+    height: 100px;
+}
+
+#calendarioBotao .anterior {
+
+    float: left;
+}
+
+#dia_atual {
+    background: #ff9999;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+#dia_atual a {
+    color: yellow;
+    text-shadow: 1px 1px 1px black;
+
+}
+#dia_atual a span {
+    text-shadow: 1px 1px 1px white;
+}
+
+.eventos {
+    float: left;
+    margin: 0 0 0 10px;
+
+    width: 630px;
+    height: 600px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.eventos span{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    position: relative;
+    
+}
+
+.novoEvento {
+    float: left;
+    background: white;
+    border-radius: 30px;
+    height: 600px;
+    width: 350px;
+    box-shadow: 2px 2px 2px black;
+}
