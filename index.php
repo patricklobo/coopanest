@@ -7,7 +7,6 @@
         Condigo de teste
         <?php
         echo "lobo";
-    
         
         ?>
     </body>
