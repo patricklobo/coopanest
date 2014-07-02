@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "lobolandia1010";
+$pass = "lobolandia1010"; 
 $banco = "coopanest";
 
 mysql_connect($host, $user, $pass)or die(mysql_error());
