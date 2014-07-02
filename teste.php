@@ -6,4 +6,4 @@
  * and open the template in the editor.
  */
 
-echo "Echo teste";
+echo "Echo teste"."LOBO";
