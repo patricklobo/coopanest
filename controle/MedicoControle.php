@@ -47,6 +47,33 @@ class MedicoControle {
         }
     }
     
+    public function Editar(){
+        
+        $this->sessao = new Sessao();
+        $this->sessao->verifica(1);
+
+        $this->template = new Template();
+        $this->template->setTitulo("Editar Medico");
+        $this->template->setConteudo("./view/MedicoEditar.php");
+        $this->template->view();
+        if (!empty($_POST)) {
+            $dados = $_POST;
+            $this->medico = new Medico();
+            $this->medico->setNome($dados['nome']);
+            $this->medico->setEmail($dados['email']);
+            $this->medico->setCpf($dados['cpf']);
+            $this->medico->setCrm($dados['crm']);
+
+            $this->validador = new Validador();
+
+            $this->medicoBD = new MedicoBD();
+            $this->medicoBD->setMedico('I', $this->medico);
+            $this->validador->alerta("Casdastro efetuado com sucesso!");
+        }
+        
+        
+    }
+    
     public function Deletar() {
         
         $this->sessao = new Sessao();
@@ -71,7 +98,16 @@ class MedicoControle {
         }
         
         
-        
     }
+    
+    public function Ajax() {
+            $this->medico = new Medico();
+            $this->medicoBD = new MedicoBD();
+            $this->medico = $this->medicoBD->getMedicoUni($_GET['crm']);
+            
+           echo $this->medico->getAjax();
+            
+            
+        }
 
 }

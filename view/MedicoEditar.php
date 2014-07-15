@@ -1,8 +1,43 @@
 <script>
 
+
+var interval = 0; 
+
+$(function()  
+{  
+    $('#crm').keypress(function()  
+    {  
+        // começa a contar o tempo  
+        clearInterval(interval); 
+
+        // 500ms após o usuário parar de digitar a função é chamada  
+        interval = window.setTimeout(function(){
+            // sua chamada ajax e demais códigos  
+            
+            // responseText.split("|")
+
+	var dados;
+        var crm = $('#crm').val();
+        
+    	$.ajax({
+    	        url: "?controle=Medico&acao=Ajax&crm="+ crm,
+    	        dataType: "html",
+    	        success: function(response) {
+    	            dados = response.responseText.split("|");
+    	            alert(dados[2]);
+    	        }
+    	});
+            
+            
+            
+        }, 500);  
+    });  
+} 
+
+
 $(function() {
     // valida o formulário
-    $('#MedicoCadastro').validate({
+    $('#MedicoEditar').validate({
         // define regras para os campos
         rules: {
             crm: {
@@ -33,8 +68,9 @@ $(function() {
 
 </script>
 
-<form action="" id="MedicoCadastro" method="POST">
+<form action="" id="MedicoEditar" method="POST">
     <table >
+        
         <tr>
             <td>
                 CRM

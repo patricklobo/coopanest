@@ -1,6 +1,9 @@
 <html>
     <head>
         <title><?=$this->titulo?></title>
+        <script src="./js/jquery.js" type="text/javascript"></script>
+        <script src="./js/validate.js" type="text/javascript"></script>
+        <script src="./js/mask.js" type="text/javascript"></script>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./view/visual.css" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

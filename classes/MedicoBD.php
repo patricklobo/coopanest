@@ -11,14 +11,12 @@
  *
  * @author patricklobo
  */
-
-foreach (glob("*.php") as $filename)
-{
+foreach (glob("*.php") as $filename) {
     require_once $filename;
 }
 
 class MedicoBD {
-    
+
     private $conexao;
     private $medico;
     private $vetMedico;
@@ -47,18 +45,19 @@ class MedicoBD {
         return $this->vetMedico;
     }
 
-    public function getMedicoUni($crm) {
+    public function getMedicoUni($crm, $acao) {
         $this->sql = "SELECT * FROM Medicos WHERE crm = '$crm' ";
         $this->conexao->execSQL($this->sql);
+            
+            while ($row = $this->conexao->listarResultados()) {
+                $this->medico = new Medico();
+                $this->medico->setCrm($row['CRM']);
+                $this->medico->setNome($row['NOME']);
+                $this->medico->setEmail($row['EMAIL']);
+                $this->medico->setCpf($row['CPF']);
+            }
+            return $this->medico;
 
-        while ($row = $this->conexao->listarResultados()) {
-            $this->medico = new Medico();
-            $this->medico->setCrm($row['CRM']);
-            $this->medico->setNome($row['NOME']);
-            $this->medico->setEmail($row['EMAIL']);
-            $this->medico->setCpf($row['CPF']);
-        }
-        return $this->medico;
     }
 
     public function setMedico($operacao, $medico) {

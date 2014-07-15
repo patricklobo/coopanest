@@ -48,6 +48,11 @@ class Medico {
     public function setEmail($email) {
         $this->email = $email;
     }
+    
+    public function getAjax(){
+        return "|".$this->crm."|".$this->nome."|".$this->email."|".$this->cpf."|";
+    }
+    
 
 
     
